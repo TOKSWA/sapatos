@@ -3,6 +3,8 @@
 <html lang="en">
   <head>
 
+    
+
   @include('admin.css')
   
   </head>
@@ -15,6 +17,14 @@
       <div class="container-fluid page-body-wrapper">
             <div class="container" align="center">
       
+            @if(session()->has('message'))
+
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ session()->get('message') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+
+            @endif
             <table>
                     <tr style="background-color: gray;">
                         <td style="padding:20px">Title</td>
@@ -22,6 +32,8 @@
                         <td style="padding:20px">Quantity</td>
                         <td style="padding:20px">Price</td>
                         <td style="padding:20px">Image</td>
+                        <td style="padding:30px">Update</td>
+                        <td style="padding:20px">Delete</td>
 
 
 
@@ -39,7 +51,13 @@
                             <img height="200" width="200" src="/productimage/{{$product->image}}">
 
                             </td>
+                            <td>
+                                <a class="btn btn-primary" href="{{url('updateview',$product->id)}}">Update</a>
+                            </td>
 
+                            <td>
+                                <a class="btn btn-danger" href="{{url('deleteproduct',$product->id)}}">Delete</a>
+                            </td>
 
 
                         </tr>
