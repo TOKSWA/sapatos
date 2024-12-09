@@ -3,15 +3,14 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
-                <!-- Logo
+                <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
                         <x-application-mark class="block h-9 w-auto" />
                     </a>
-                </div> -->
+                </div>
 
                 <!-- Navigation Links -->
-
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ms-6">

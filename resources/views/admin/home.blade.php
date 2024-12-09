@@ -1,3 +1,21 @@
-<x-app-layout>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  @include('admin.css')
+  
+  </head>
+    <!-- Required meta tags -->
     
-</x-app-layout>
+      @include('admin.sidebar')
+      @include ('admin.navbar')
+
+        
+          <!-- partial -->
+      @include('admin.body')
+        
+
+      @include('admin.script')
+  </body>
+</html>
